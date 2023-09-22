@@ -2,7 +2,7 @@
 
 
 1st phase - The project will be focused on automated testing of basic operations on the web form, including filling, sending and verifying the display of the confirmation page.
-          Loading the page, rejecting cookies and logging in to the account name then works. I just can't send the password
+          
 
 
           
