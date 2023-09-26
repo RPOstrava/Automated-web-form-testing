@@ -29,13 +29,13 @@ element.click()
 element = driver.find_element(By.ID, "gh-ug")
 element.click()
 
-element = driver.find_element(By.ID, "userid")
+element = driver.find_element(By.ID, "userid") #id was deletet, i used my personal id
 element.send_keys("email")
 
 element = driver.find_element(By.ID, "signin-continue-btn")
 element.click()
 
-element = driver.find_element(By.ID, "pass")
+element = driver.find_element(By.ID, "pass") #as id
 element.click()
 
 time.sleep(2)
