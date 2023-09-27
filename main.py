@@ -26,41 +26,139 @@ element.click()
 #-------------------------- 1st phase login ---------------------------------------------
 
 
-element = driver.find_element(By.ID, "gh-ug")
+#element = driver.find_element(By.ID, "gh-ug")
+#element.click()
+
+#element = driver.find_element(By.ID, "userid") #id was deletet, i used my personal id
+#element.send_keys("email")
+
+#element = driver.find_element(By.ID, "signin-continue-btn")
+#element.click()
+
+#element = driver.find_element(By.ID, "pass") #as id
+#element.click()
+
+#time.sleep(2)
+
+#element.clear()
+#element.send_keys("password")
+
+#element = driver.find_element(By.ID, "sgnBt")
+#element.click()
+
+#driver.close()
+
+# -------------------------- 2nd phase, changing language --------------------------------------------
+
+#default_language = driver.find_element(By.ID, "gh-eb-Geo-a-default")
+#eng_language = driver.find_element(By.CSS_SELECTOR, "#gh-eb-Geo-a-en > span.gh-eb-Geo-txt")
+
+
+#actions = ActionChains(driver)
+
+#actions.move_to_element(default_language).perform()
+
+#wait = WebDriverWait(driver, 15)
+#wait.until(EC.text_to_be_present_in_element((By.ID, "gh-eb-Geo-a-en"), "English"))
+           
+#actions.click(eng_language).perform()
+
+#driver.close()
+
+#------------------------- 3rd phase, links are set up correctly and lead to relevant pages ----------
+service = Service("C:\Projects\Web_analytics\geckodriver.exe")
+driver = webdriver.Firefox(service=service)
+
+driver.get("https://www.ebay.com")
+
+time.sleep(3)
+
+element = driver.find_element(By.ID, "gdpr-banner-decline")
 element.click()
 
-element = driver.find_element(By.ID, "userid") #id was deletet, i used my personal id
-element.send_keys("email")
-
-element = driver.find_element(By.ID, "signin-continue-btn")
+element = driver.find_element(By.ID, "gh-btn")
 element.click()
 
-element = driver.find_element(By.ID, "pass") #as id
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#ebay-motors"]')
 element.click()
 
 time.sleep(2)
 
-element.clear()
-element.send_keys("password")
+driver.back()
 
-element = driver.find_element(By.ID, "sgnBt")
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#electronics"]')
 element.click()
 
-driver.close()
+time.sleep(2)
 
-# -------------------------- 2nd phase, changing language --------------------------------------------
+driver.back()
 
-default_language = driver.find_element(By.ID, "gh-eb-Geo-a-default")
-eng_language = driver.find_element(By.CSS_SELECTOR, "#gh-eb-Geo-a-en > span.gh-eb-Geo-txt")
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#clothing-shoes-and-accessories"]')
+element.click()
 
+time.sleep(2)
 
-actions = ActionChains(driver)
+driver.back()
 
-actions.move_to_element(default_language).perform()
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#collectibles-and-art"]')
+element.click()
 
-wait = WebDriverWait(driver, 15)
-wait.until(EC.text_to_be_present_in_element((By.ID, "gh-eb-Geo-a-en"), "English"))
-           
-actions.click(eng_language).perform()
+time.sleep(2)
 
-#------------------------- 3rd phase, links are set up correctly and lead to relevant pages ----------
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#sporting-goods"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#home-and-garden"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#toys-and-hobbies"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#books-movies-and-music"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#business-and-industrial"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#health-and-beauty"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#pet-supplies"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
+
+element = driver.find_element(By.CSS_SELECTOR, 'a[href="#baby-essentials"]')
+element.click()
+
+time.sleep(2)
+
+driver.back()
